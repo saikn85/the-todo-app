@@ -1,41 +1,44 @@
-using Todo.Domain;
+using Microsoft.AspNetCore.Mvc;
 
-[Route("[controller]")]
-public class TodoController : ControllerBase
+namespace TheTodoApp.API
 {
-    private readonly ILogger<TodoController> _log;
-    public TodoController(ILogger<TodoController> log)
+    [Route("[controller]")]
+    public class TodoController : ControllerBase
     {
-        _log = log;
-    }
+        private readonly ILogger<TodoController> _log;
+        public TodoController(ILogger<TodoController> log)
+        {
+            _log = log;
+        }
 
-    [HttpGet]
-    public IActionResult GetAsync()
-    {
+        [HttpGet]
+        public IActionResult GetAsync()
+        {
 
-    }
+        }
 
-    [HttpGet("{id}")]
-    public IActionResult GetAsync([FromRoute] int id)
-    {
+        [HttpGet("{id}")]
+        public IActionResult GetAsync([FromRoute] int id)
+        {
 
-    }
+        }
 
-    [HttpPost]
-    public IActionResult PostAsync([FromBody] Todo todo)
-    {
+        [HttpPost]
+        public IActionResult PostAsync([FromBody] Todo todo)
+        {
 
-    }
+        }
 
-    [HttpPatch("{id}")]
-    public IActionResult PatchAsync([FromRoute] int id, [FromBody] Todo todo)
-    {
+        [HttpPatch("{id}")]
+        public IActionResult PatchAsync([FromRoute] int id, [FromBody] Todo todo)
+        {
 
-    }
+        }
 
-    [HttpDelete("{id}")]
-    public IActionResult DeleteAsync([FromRoute] int id)
-    {
+        [HttpDelete("{id}")]
+        public IActionResult DeleteAsync([FromRoute] int id)
+        {
 
+        }
     }
 }

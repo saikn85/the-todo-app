@@ -18,4 +18,8 @@
     <Folder Include="Controllers\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\TheTodoApp.Domain\TheTodoApp.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

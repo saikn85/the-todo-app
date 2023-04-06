@@ -1,4 +1,4 @@
-namespace Todo.API
+namespace TheTodoApp.API
 {
     public class Program
     {
