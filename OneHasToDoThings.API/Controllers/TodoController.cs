@@ -13,7 +13,7 @@ public class TodoController : ControllerBase
     }
 
     [HttpGet("{id}")]
-    public string Get(int id)
+    public string Get([FromRoute] int id)
     {
         return "value";
     }
@@ -24,12 +24,12 @@ public class TodoController : ControllerBase
     }
 
     [HttpPut("{id}")]
-    public void Put(int id, [FromBody] string value)
+    public void Put([FromRoute] int id, [FromBody] string value)
     {
     }
 
     [HttpDelete("{id}")]
-    public void Delete(int id)
+    public void Delete([FromRoute] int id)
     {
     }
 }

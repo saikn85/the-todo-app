@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OneHasToDoThings.Domain", "OneHasToDoThings.Domain\OneHasToDoThings.Domain.csproj", "{AECC3434-3B96-4FC2-9E75-7FC7F4969E45}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OneHasToDoThings.Domain", "OneHasToDoThings.Domain\OneHasToDoThings.Domain.csproj", "{AECC3434-3B96-4FC2-9E75-7FC7F4969E45}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OneHasToDoThings.API", "OneHasToDoThings.API\OneHasToDoThings.API.csproj", "{0E382275-C014-41E3-9CA5-A63C18E697D4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OneHasToDoThings.API", "OneHasToDoThings.API\OneHasToDoThings.API.csproj", "{0E382275-C014-41E3-9CA5-A63C18E697D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OneHasToDoThings.Infrastructure", "OneHasToDoThings.Infrastructure\OneHasToDoThings.Infrastructure.csproj", "{0D09E7DE-FEFC-408F-ADD5-3CDF35D6CA8C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{0E382275-C014-41E3-9CA5-A63C18E697D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E382275-C014-41E3-9CA5-A63C18E697D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E382275-C014-41E3-9CA5-A63C18E697D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D09E7DE-FEFC-408F-ADD5-3CDF35D6CA8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D09E7DE-FEFC-408F-ADD5-3CDF35D6CA8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D09E7DE-FEFC-408F-ADD5-3CDF35D6CA8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D09E7DE-FEFC-408F-ADD5-3CDF35D6CA8C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
