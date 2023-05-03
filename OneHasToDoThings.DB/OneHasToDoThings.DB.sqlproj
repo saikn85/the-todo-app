@@ -62,9 +62,25 @@
     <Folder Include="Properties" />
     <Folder Include="dbo\" />
     <Folder Include="dbo\Tables\" />
+    <Folder Include="Scripts" />
+    <Folder Include="Scripts\Pre-Deployment" />
+    <Folder Include="Scripts\Post-Deployment" />
+    <Folder Include="Scripts\Static Data" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\dbo.TaskType.sql" />
     <Build Include="dbo\Tables\dbo.Todo.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Scripts\Post-Deployment\Script.PostDeployment.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PreDeploy Include="Scripts\Pre-Deployment\Script.PreDeployment.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\Static Data\TaskType.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="OneHasToDoThings.DB.publish.xml" />
   </ItemGroup>
 </Project>
