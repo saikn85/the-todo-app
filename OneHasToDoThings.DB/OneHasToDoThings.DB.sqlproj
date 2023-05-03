@@ -65,5 +65,6 @@
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\dbo.TaskType.sql" />
+    <Build Include="dbo\Tables\dbo.Todo.sql" />
   </ItemGroup>
 </Project>
