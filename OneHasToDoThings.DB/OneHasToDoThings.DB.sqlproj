@@ -81,6 +81,5 @@
     <None Include="Scripts\Static Data\TaskType.sql">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="OneHasToDoThings.DB.publish.xml" />
   </ItemGroup>
 </Project>

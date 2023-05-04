@@ -2,22 +2,22 @@
 GO
 
 ;WITH
-[New] (TaskTypeId, TaskDescription) AS 
+N (TaskTypeId, TaskDescription) AS 
 	(
 		SELECT
 			1		AS	TaskTypeId,
 			N'New'	AS	TaskDescription
 	)
-MERGE [dbo].[TaskType] [Old]
-USING [New] ON [Old].[TaskTypeId] = [New].[TaskTypeId]
-WHEN MATCHED		THEN	UPDATE SET [Old].[TaskDescription] = [New].[TaskDescription]
+MERGE [dbo].[TaskType] O
+USING N ON O.[TaskTypeId] = N.[TaskTypeId]
+WHEN MATCHED		THEN	UPDATE SET O.[TaskDescription] = N.[TaskDescription]
 WHEN NOT MATCHED	THEN	INSERT
 	(
 		TaskTypeId, TaskDescription
 	)
 	VALUES
 	(
-		[New].[TaskDescription], [New].[TaskDescription]
+		N.[TaskTypeId], N.[TaskDescription]
 	)
 WHEN NOT MATCHED BY SOURCE THEN DELETE;
 GO
