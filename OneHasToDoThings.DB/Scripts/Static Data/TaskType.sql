@@ -9,6 +9,10 @@ N (TaskTypeId, TaskDescription) AS
 			N'New'	AS	TaskDescription
 		UNION ALL
 		SELECT
+			2				AS	TaskTypeId,
+			N'In Progress'	AS	TaskDescription
+		UNION ALL
+		SELECT
 			3				AS	TaskTypeId,
 			N'Completed'	AS	TaskDescription
 	)
