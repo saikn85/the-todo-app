@@ -7,6 +7,10 @@ N (TaskTypeId, TaskDescription) AS
 		SELECT
 			1		AS	TaskTypeId,
 			N'New'	AS	TaskDescription
+		UNION ALL
+		SELECT
+			3				AS	TaskTypeId,
+			N'Completed'	AS	TaskDescription
 	)
 MERGE [dbo].[TaskType] O
 USING N ON O.[TaskTypeId] = N.[TaskTypeId]
