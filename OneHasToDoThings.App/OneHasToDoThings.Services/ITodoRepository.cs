@@ -7,7 +7,7 @@ namespace OneHasToDoThings.AppCore
         Task<ToDo> CreateAsync(ToDo todo);
         Task<bool> UpdateAsync(ToDo todo);
         Task<bool> DeleteAsync(ToDo todo);
-        Task<IEnumerable<ToDo>> ReadAsync(TaskType? tType, DateTime? tCreated);
-        Task<ToDo> ReadAsync(Guid id, string? tName, string? tDesc);
+        Task<IEnumerable<ToDo>> ReadAsync(TaskType? tType, DateTime? tCreated, string? tName, string? tDesc);
+        Task<ToDo> ReadAsync(Guid id);
     }
 }
