@@ -10,10 +10,8 @@ namespace OneHasToDoThings.Infrastructure
 
         private readonly DAL _dataAccess;
 
-#pragma warning disable CS8604 // Possible null reference argument.
         public TodoRepository(IConfiguration config) =>
             _dataAccess = new DAL(config.GetConnectionString("DefaultConnectionString"));
-#pragma warning restore CS8604 // Possible null reference argument.
 
         #endregion
 
