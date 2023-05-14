@@ -1,6 +1,6 @@
 ﻿namespace OneHasToDoThings.Infrastructure
 {
-    public class DAL
+    public sealed class DAL
     {
         #region Dependencies
         
