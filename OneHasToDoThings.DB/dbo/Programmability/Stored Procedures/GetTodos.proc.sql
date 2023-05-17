@@ -9,6 +9,6 @@ BEGIN
 		[T1].[Created],
 		[T1].[Completed]
 	FROM [dbo].[Todo] AS T1
-	INNER JOIN [dbo].[TaskType] AS T2 ON [T2].[TaskTypeId] = [T1].[TypeId]
+	INNER JOIN [dbo].[TaskType] AS T2 ON [T2].[TaskTypeId] = [T1].[TaskTypeId]
 END;
 GO
