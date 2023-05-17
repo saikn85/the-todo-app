@@ -75,6 +75,7 @@
     <Build Include="dbo\Programmability\Stored Procedures\GetTodos.proc.sql">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Build>
+    <Build Include="dbo\Programmability\Stored Procedures\InsertTodo.proc.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Scripts\Post-Deployment\Script.PostDeployment.sql" />

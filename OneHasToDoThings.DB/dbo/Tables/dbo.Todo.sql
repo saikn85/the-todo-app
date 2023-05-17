@@ -4,10 +4,10 @@
 	[TaskName]						VARCHAR (100)		NOT NULL,
 	[TaskDescription]				VARCHAR (MAX)		NOT NULL,
 	[Created]						DATETIMEOFFSET		NOT NULL	DEFAULT		GETDATE(),
-	[TypeId]						SMALLINT			NOT NULL,
+	[TaskTypeId]					SMALLINT			NOT NULL,
 	[Completed]						DATETIMEOFFSET		NOT NULL	DEFAULT		'0000-01-01',
     CONSTRAINT [PK_Todo_Id]			PRIMARY KEY			CLUSTERED	([Id] ASC),
-	CONSTRAINT [FK_Todo_TaskType]	FOREIGN KEY						([TypeId])
+	CONSTRAINT [FK_Todo_TaskType]	FOREIGN KEY						([TaskTypeId])
 	REFERENCES [dbo].[TaskType] ([TaskTypeId]) ON DELETE NO ACTION	ON UPDATE CASCADE
 );
 GO
