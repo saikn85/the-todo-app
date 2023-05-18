@@ -3,17 +3,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <Name>OneHasToDoThings.DB</Name>
+    <Name>OneHasToDoThings.DB.Server</Name>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectVersion>4.1</ProjectVersion>
-    <ProjectGuid>{40f3035d-b8ca-48c5-83d2-5d2bb8178b49}</ProjectGuid>
+    <ProjectGuid>{bd242920-6241-4261-8901-c4bfffd78cea}</ProjectGuid>
     <DSP>Microsoft.Data.Tools.Schema.Sql.Sql160DatabaseSchemaProvider</DSP>
     <OutputType>Database</OutputType>
     <RootPath>
     </RootPath>
-    <RootNamespace>OneHasToDoThings.DB</RootNamespace>
-    <AssemblyName>OneHasToDoThings.DB</AssemblyName>
-    <ModelCollation>1033,CI</ModelCollation>
+    <RootNamespace>OneHasToDoThings.DB.Server</RootNamespace>
+    <AssemblyName>OneHasToDoThings.DB.Server</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
     <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
     <DeployToDatabase>True</DeployToDatabase>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
@@ -22,9 +22,6 @@
     <SqlServerVerification>False</SqlServerVerification>
     <IncludeCompositeObjects>True</IncludeCompositeObjects>
     <TargetDatabaseSet>True</TargetDatabaseSet>
-    <IncludeSchemaNameInFileName>True</IncludeSchemaNameInFileName>
-    <DefaultCollation>Latin1_General_CI_AS</DefaultCollation>
-    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -48,7 +45,6 @@
     <DefineTrace>true</DefineTrace>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Debug\OneHasToDoThings.DB.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
@@ -60,32 +56,5 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
-    <Folder Include="dbo\" />
-    <Folder Include="dbo\Tables\" />
-    <Folder Include="Scripts" />
-    <Folder Include="Scripts\Pre-Deployment" />
-    <Folder Include="Scripts\Post-Deployment" />
-    <Folder Include="Scripts\Static Data" />
-    <Folder Include="dbo\Programmability" />
-    <Folder Include="dbo\Programmability\Stored Procedures" />
-  </ItemGroup>
-  <ItemGroup>
-    <Build Include="dbo\Tables\dbo.TaskType.sql" />
-    <Build Include="dbo\Tables\dbo.Todo.sql" />
-    <Build Include="dbo\Programmability\Stored Procedures\GetTodos.proc.sql">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Build>
-    <Build Include="dbo\Programmability\Stored Procedures\InsertTodo.proc.sql" />
-  </ItemGroup>
-  <ItemGroup>
-    <PostDeploy Include="Scripts\Post-Deployment\Script.PostDeployment.sql" />
-  </ItemGroup>
-  <ItemGroup>
-    <PreDeploy Include="Scripts\Pre-Deployment\Script.PreDeployment.sql" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Scripts\Static Data\TaskType.sql">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
 </Project>
