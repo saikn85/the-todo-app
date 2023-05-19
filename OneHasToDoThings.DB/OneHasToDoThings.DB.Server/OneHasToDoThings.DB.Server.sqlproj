@@ -60,10 +60,20 @@
     <Folder Include="dbo\Tables" />
     <Folder Include="dbo\Programmability" />
     <Folder Include="dbo\Programmability\Stored Procedures" />
+    <Folder Include="Scripts" />
+    <Folder Include="Scripts\Post-Deployment" />
+    <Folder Include="Scripts\Pre-Deployment" />
+    <Folder Include="Scripts\Static-Data" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Programmability\Stored Procedures\CreateTodo.proc.sql" />
     <Build Include="dbo\Tables\TaskType.sql" />
     <Build Include="dbo\Tables\Todo.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\Static-Data\TaskType.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Scripts\Post-Deployment\Script.PostDeployment.sql" />
   </ItemGroup>
 </Project>

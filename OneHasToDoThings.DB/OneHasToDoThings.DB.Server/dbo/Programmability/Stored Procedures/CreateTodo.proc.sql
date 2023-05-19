@@ -1,8 +1,8 @@
 ﻿CREATE PROCEDURE [dbo].[CreateToDo]
 (
     @TaskName VARCHAR(20),
-    @TaskDescrption VARCHAR(MAX),
-    @TaskTypeId SMALLIN
+    @TaskDescription VARCHAR(MAX),
+    @TaskTypeId SMALLINT
 )
 AS
 BEGIN
