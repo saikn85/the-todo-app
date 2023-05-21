@@ -11,7 +11,6 @@ namespace OneHasToDoThings.DB.Tests
     [TestClass()]
     public class SqlDatabaseSetup
     {
-
         [AssemblyInitialize()]
         public static void InitializeAssembly(TestContext ctx)
         {
@@ -20,6 +19,5 @@ namespace OneHasToDoThings.DB.Tests
             SqlDatabaseTestClass.TestService.DeployDatabaseProject();
             SqlDatabaseTestClass.TestService.GenerateData();
         }
-
     }
 }

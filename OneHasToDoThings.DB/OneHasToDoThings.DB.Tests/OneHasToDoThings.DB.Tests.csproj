@@ -199,7 +199,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="CreateTodoTests.cs">
+    <Compile Include="InsertTodoTests.cs">
       <SubType>Designer</SubType>
     </Compile>
     <Compile Include="SqlDatabaseSetup.cs" />
@@ -210,11 +210,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="CreateTodoTests.resx">
-      <DependentUpon>CreateTodoTests.cs</DependentUpon>
+    <EmbeddedResource Include="InsertTodoTests.resx">
+      <DependentUpon>InsertTodoTests.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup Condition="$(VisualStudioVersion) == '17.0'">
     <Reference Include="Microsoft.Data.Tools.Schema.Sql, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>$(SSDTPath)\Microsoft.Data.Tools.Schema.Sql.dll</HintPath>

@@ -10,10 +10,10 @@ using System.Text;
 namespace OneHasToDoThings.DB.Tests
 {
     [TestClass()]
-    public class CreateTodoTests : SqlDatabaseTestClass
+    public class InsertTodoTests : SqlDatabaseTestClass
     {
 
-        public CreateTodoTests()
+        public InsertTodoTests()
         {
             InitializeComponent();
         }
@@ -37,30 +37,30 @@ namespace OneHasToDoThings.DB.Tests
         /// </summary>
         private void InitializeComponent()
         {
-            Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction dbo_CreateToDoTest_TestAction;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateTodoTests));
-            Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.RowCountCondition OneRowShouldBeCreated;
-            this.dbo_CreateToDoTestData = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestActions();
-            dbo_CreateToDoTest_TestAction = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction();
-            OneRowShouldBeCreated = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.RowCountCondition();
+            Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction dbo_InsertToDoTest_TestAction;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InsertTodoTests));
+            Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.RowCountCondition rowCountCondition1;
+            this.dbo_InsertToDoTestData = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestActions();
+            dbo_InsertToDoTest_TestAction = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction();
+            rowCountCondition1 = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.RowCountCondition();
             // 
-            // dbo_CreateToDoTest_TestAction
+            // dbo_InsertToDoTestData
             // 
-            dbo_CreateToDoTest_TestAction.Conditions.Add(OneRowShouldBeCreated);
-            resources.ApplyResources(dbo_CreateToDoTest_TestAction, "dbo_CreateToDoTest_TestAction");
+            this.dbo_InsertToDoTestData.PosttestAction = null;
+            this.dbo_InsertToDoTestData.PretestAction = null;
+            this.dbo_InsertToDoTestData.TestAction = dbo_InsertToDoTest_TestAction;
             // 
-            // dbo_CreateToDoTestData
+            // dbo_InsertToDoTest_TestAction
             // 
-            this.dbo_CreateToDoTestData.PosttestAction = null;
-            this.dbo_CreateToDoTestData.PretestAction = null;
-            this.dbo_CreateToDoTestData.TestAction = dbo_CreateToDoTest_TestAction;
+            dbo_InsertToDoTest_TestAction.Conditions.Add(rowCountCondition1);
+            resources.ApplyResources(dbo_InsertToDoTest_TestAction, "dbo_InsertToDoTest_TestAction");
             // 
-            // OneRowShouldBeCreated
+            // rowCountCondition1
             // 
-            OneRowShouldBeCreated.Enabled = true;
-            OneRowShouldBeCreated.Name = "OneRowShouldBeCreated";
-            OneRowShouldBeCreated.ResultSet = 1;
-            OneRowShouldBeCreated.RowCount = 1;
+            rowCountCondition1.Enabled = true;
+            rowCountCondition1.Name = "rowCountCondition1";
+            rowCountCondition1.ResultSet = 1;
+            rowCountCondition1.RowCount = 1;
         }
 
         #endregion
@@ -81,9 +81,9 @@ namespace OneHasToDoThings.DB.Tests
         #endregion
 
         [TestMethod()]
-        public void dbo_CreateToDoTest()
+        public void dbo_InsertToDoTest()
         {
-            SqlDatabaseTestActions testActions = this.dbo_CreateToDoTestData;
+            SqlDatabaseTestActions testActions = this.dbo_InsertToDoTestData;
             // Execute the pre-test script
             // 
             System.Diagnostics.Trace.WriteLineIf((testActions.PretestAction != null), "Executing pre-test script...");
@@ -103,6 +103,6 @@ namespace OneHasToDoThings.DB.Tests
                 SqlExecutionResult[] posttestResults = TestService.Execute(this.PrivilegedContext, this.PrivilegedContext, testActions.PosttestAction);
             }
         }
-        private SqlDatabaseTestActions dbo_CreateToDoTestData;
+        private SqlDatabaseTestActions dbo_InsertToDoTestData;
     }
 }
