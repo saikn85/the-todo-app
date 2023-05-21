@@ -66,7 +66,7 @@
     <Folder Include="Scripts\Static-Data" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="dbo\Programmability\Stored Procedures\CreateTodo.proc.sql" />
+    <Build Include="dbo\Programmability\Stored Procedures\InsertTodo.proc.sql" />
     <Build Include="dbo\Tables\TaskType.sql" />
     <Build Include="dbo\Tables\Todo.sql" />
   </ItemGroup>
@@ -75,5 +75,8 @@
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Scripts\Post-Deployment\Script.PostDeployment.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PreDeploy Include="Scripts\Pre-Deployment\Script.PreDeployment.sql" />
   </ItemGroup>
 </Project>
