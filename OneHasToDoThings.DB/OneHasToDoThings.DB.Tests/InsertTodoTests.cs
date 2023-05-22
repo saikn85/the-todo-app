@@ -37,23 +37,17 @@ namespace OneHasToDoThings.DB.Tests
         /// </summary>
         private void InitializeComponent()
         {
-            Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction dbo_InsertToDoTest_TestAction;
+            Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction dbo_InsertToDo_Success_TestAction;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InsertTodoTests));
             Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.RowCountCondition rowCountCondition1;
-            this.dbo_InsertToDoTestData = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestActions();
-            dbo_InsertToDoTest_TestAction = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction();
+            this.dbo_InsertToDo_SuccessData = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestActions();
+            dbo_InsertToDo_Success_TestAction = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction();
             rowCountCondition1 = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.RowCountCondition();
             // 
-            // dbo_InsertToDoTestData
+            // dbo_InsertToDo_Success_TestAction
             // 
-            this.dbo_InsertToDoTestData.PosttestAction = null;
-            this.dbo_InsertToDoTestData.PretestAction = null;
-            this.dbo_InsertToDoTestData.TestAction = dbo_InsertToDoTest_TestAction;
-            // 
-            // dbo_InsertToDoTest_TestAction
-            // 
-            dbo_InsertToDoTest_TestAction.Conditions.Add(rowCountCondition1);
-            resources.ApplyResources(dbo_InsertToDoTest_TestAction, "dbo_InsertToDoTest_TestAction");
+            dbo_InsertToDo_Success_TestAction.Conditions.Add(rowCountCondition1);
+            resources.ApplyResources(dbo_InsertToDo_Success_TestAction, "dbo_InsertToDo_Success_TestAction");
             // 
             // rowCountCondition1
             // 
@@ -61,6 +55,12 @@ namespace OneHasToDoThings.DB.Tests
             rowCountCondition1.Name = "rowCountCondition1";
             rowCountCondition1.ResultSet = 1;
             rowCountCondition1.RowCount = 1;
+            // 
+            // dbo_InsertToDo_SuccessData
+            // 
+            this.dbo_InsertToDo_SuccessData.PosttestAction = null;
+            this.dbo_InsertToDo_SuccessData.PretestAction = null;
+            this.dbo_InsertToDo_SuccessData.TestAction = dbo_InsertToDo_Success_TestAction;
         }
 
         #endregion
@@ -81,9 +81,9 @@ namespace OneHasToDoThings.DB.Tests
         #endregion
 
         [TestMethod()]
-        public void dbo_InsertToDoTest()
+        public void dbo_InsertToDo_Success()
         {
-            SqlDatabaseTestActions testActions = this.dbo_InsertToDoTestData;
+            SqlDatabaseTestActions testActions = this.dbo_InsertToDo_SuccessData;
             // Execute the pre-test script
             // 
             System.Diagnostics.Trace.WriteLineIf((testActions.PretestAction != null), "Executing pre-test script...");
@@ -103,6 +103,6 @@ namespace OneHasToDoThings.DB.Tests
                 SqlExecutionResult[] posttestResults = TestService.Execute(this.PrivilegedContext, this.PrivilegedContext, testActions.PosttestAction);
             }
         }
-        private SqlDatabaseTestActions dbo_InsertToDoTestData;
+        private SqlDatabaseTestActions dbo_InsertToDo_SuccessData;
     }
 }
