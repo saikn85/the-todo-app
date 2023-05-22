@@ -9,6 +9,38 @@
                SELECT * FROM [$(TableName)]					
 --------------------------------------------------------------------------------------
 */
-IF OBJECT_ID('[dbo].[CreateTodo]', 'P') IS NOT NULL
-    DROP PROCEDURE [dbo].[CreateTodo];
+SET
+    ANSI_NULLS,
+    ANSI_PADDING,
+    ANSI_WARNINGS,
+    ARITHABORT,
+    CONCAT_NULL_YIELDS_NULL,
+    QUOTED_IDENTIFIER ON;
+
+SET NUMERIC_ROUNDABORT OFF;
+GO
+
+:setvar __IsSqlCmdEnabled "True"
+:setvar DatabaseName "OneHasToDoThings"
+GO
+
+IF N'$(__IsSqlCmdEnabled)' NOT LIKE N'True'
+    BEGIN
+        PRINT N'SQLCMD mode must be enabled to successfully execute this script.';
+    END;
+GO
+
+SET NOEXEC ON;
+GO
+
+SET XACT_ABORT ON;
+GO
+
+USE [$(DatabaseName)];
+GO
+
+BEGIN TRANSACTION;
+    IF OBJECT_ID('[dbo].[CreateTodo]', 'P') IS NOT NULL
+        DROP PROCEDURE [dbo].[CreateTodo];
+COMMIT TRANSACTION;
 GO

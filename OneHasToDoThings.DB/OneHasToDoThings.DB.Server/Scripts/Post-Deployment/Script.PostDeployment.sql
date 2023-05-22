@@ -25,21 +25,21 @@ GO
 GO
 
 IF N'$(__IsSqlCmdEnabled)' NOT LIKE N'True'
-BEGIN
-    PRINT N'SQLCMD mode must be enabled to successfully execute this script.';
+    BEGIN
+        PRINT N'SQLCMD mode must be enabled to successfully execute this script.';
+    END;
+GO
 
 SET NOEXEC ON;
-END;
+GO
+
+SET XACT_ABORT ON;
 GO
 
 USE [$(DatabaseName)];
 GO
 
-SET XACT_ABORT ON;
 BEGIN TRANSACTION;
-GO
-
-:r "..\Static-Data\TaskType.sql"
-
+    :r "..\Static-Data\TaskType.sql"
 COMMIT TRANSACTION;
 GO
