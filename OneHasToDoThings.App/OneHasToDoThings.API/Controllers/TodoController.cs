@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using OneHasToDoThings.Domain;
 
 namespace OneHasToDoThings.API.Controllers;
 
@@ -6,16 +7,27 @@ namespace OneHasToDoThings.API.Controllers;
 [ApiController]
 public class TodoController : ControllerBase
 {
-    [HttpGet]
-    public IEnumerable<string> Get()
+    #region Dependencies
+
+    private readonly ILogger<TodoController> _logger;
+
+    public TodoController(ILogger<TodoController> logger)
     {
-        return new string[] { "value1", "value2" };
+        _logger = logger;
+    }
+
+    #endregion
+
+    [HttpGet]
+    public IActionResult Get()
+    {
+        return Ok();
     }
 
     [HttpGet("{id}")]
-    public string Get([FromRoute] int id)
+    public IActionResult Get([FromRoute] Guid id)
     {
-        return "value";
+        return Ok();
     }
 
     [HttpPost]
