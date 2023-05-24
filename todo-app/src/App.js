@@ -3,6 +3,7 @@ import './App.css';
 
 function App() {
   return (
+    // JSX Extension enables us to write HTML templated code
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
