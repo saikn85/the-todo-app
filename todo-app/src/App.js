@@ -1,4 +1,5 @@
 import React from 'react';
+import { TodoList } from './components/TodoList/TodoList';
 
 class AppComponent extends React.Component {
 	// Render function is the main function, that is responsible
@@ -6,7 +7,12 @@ class AppComponent extends React.Component {
 	// That is, HTML + CSS
 	// JS gets Bootstrapped upon compilation
 	render() {
-		return <div>Hello World!</div>;
+		return (
+			<div>
+				<p>Hello World!</p>
+				<TodoList />
+			</div>
+		);
 	}
 }
 
