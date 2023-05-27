@@ -1,29 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
 
-function App() {
-	return (
-		// JSX Extension enables us to write HTML templated code - Babel.js
-		<div className="App">
-			<header className="App-header">
-				<img
-					src={logo}
-					className="App-logo"
-					alt="logo"
-				/>
-				<p>
-					Edit <code>src/App.js</code> and save to reload.
-				</p>
-				<a
-					className="App-link"
-					href="https://reactjs.org"
-					target="_blank"
-					rel="noopener noreferrer">
-					Learn React
-				</a>
-			</header>
-		</div>
-	);
+class AppComponent extends React.Component {
+	// Render function is the main function, that is responsible
+	// for having the UI rendered;
+	// That is, HTML + CSS
+	// JS gets Bootstrapped upon compilation
+	render() {
+		return <div>Hello World!</div>;
+	}
 }
 
-export default App;
+export default AppComponent;
