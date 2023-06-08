@@ -1,9 +1,10 @@
-const TodoCard = () => {
+const TodoCard = ({ todo }) => {
   return (
     <div>
-      <p></p>
+      <p>{todo.title}</p>
+      <p>{todo.time.toISOString()}</p>
     </div>
   );
 };
 
-export default TodoCard;
+export { TodoCard };

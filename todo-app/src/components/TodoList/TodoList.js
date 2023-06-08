@@ -32,4 +32,4 @@ const TodoList = () => {
   );
 };
 
-export default TodoList;
+export { TodoList };
