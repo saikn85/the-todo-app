@@ -8,10 +8,7 @@ class App extends React.Component {
   // JS gets Bootstrapped upon compilation
   render() {
     return (
-      <div>
-        <p>Hello World!</p>
-        <TodoList />
-      </div>
+      <div></div>
     );
   }
 }
