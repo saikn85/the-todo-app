@@ -1,4 +1,5 @@
 import React from "react";
+import "./App.css";
 import { TodoList } from "./components/TodoList/TodoList";
 
 class App extends React.Component {
@@ -8,7 +9,11 @@ class App extends React.Component {
   // JS gets Bootstrapped upon compilation
   render() {
     return (
-      <div></div>
+      <div className="app-main">
+        <section>Header</section>
+        <section>Main</section>
+        <section>Footer</section>
+      </div>
     );
   }
 }
