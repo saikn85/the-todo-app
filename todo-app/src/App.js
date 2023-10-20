@@ -11,7 +11,9 @@ class App extends React.Component {
     return (
       <div className="app-main">
         <section>Header</section>
-        <section>Main</section>
+        <section>
+          <TodoList />
+        </section>
         <section>Footer</section>
       </div>
     );
