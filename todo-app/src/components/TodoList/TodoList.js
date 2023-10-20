@@ -5,7 +5,7 @@ import { useState } from "react";
 // The Function Component
 
 const TodoList = () => {
-  const data = [
+  const [todos, setTodos] = useState([
     {
       title: "ab",
       time: new Date(),
@@ -22,14 +22,12 @@ const TodoList = () => {
       title: "aa",
       time: new Date(),
     },
-  ];
-
-  const [todos, setTodos] = useState(data);
+  ]);
 
   const removeTodo = (todo) => {
-    const idx = data.indexOf(({ title, time }) => title === todo.title);
-    data.splice(idx, 1);
-    setTodos(data);
+    const idx = todos.indexOf((_todo) => _todo.title === todo.title);
+    todos.splice(idx, 1);
+    setTodos(todos);
   };
 
   return (
