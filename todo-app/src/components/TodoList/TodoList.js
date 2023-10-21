@@ -27,8 +27,7 @@ const TodoList = () => {
   const removeTodo = (todo) => {
     const idx = todos.findIndex(({ title, time }) => title === todo.title);
     todos.splice(idx, 1);
-    
-    setTodos(todos);
+    setTodos([...todos]);
   };
 
   return (
